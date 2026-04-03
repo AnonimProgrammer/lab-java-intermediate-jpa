@@ -13,8 +13,8 @@ public class BillableTask extends Task {
     private Double hourlyRate;
 
     public BillableTask() {}
-    public BillableTask(LocalDate dueDate, Boolean status, Double hourlyRate) {
-        super(dueDate, status);
+    public BillableTask(String title, LocalDate dueDate, Boolean status, Double hourlyRate) {
+        super(title, dueDate, status);
         this.hourlyRate = hourlyRate;
     }
 

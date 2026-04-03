@@ -9,8 +9,7 @@ import java.time.LocalDate;
 @Table(name = "internal_tasks")
 public class InternalTask extends Task {
     public InternalTask() {}
-
-    public InternalTask(LocalDate dueDate, Boolean status) {
-        super(dueDate, status);
+    public InternalTask(String title, LocalDate dueDate, Boolean status) {
+        super(title, dueDate, status);
     }
 }

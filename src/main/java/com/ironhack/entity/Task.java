@@ -12,13 +12,17 @@ public abstract class Task {
     private UUID id;
 
     @Column(nullable = false)
+    private String title;
+
+    @Column(nullable = false)
     private LocalDate dueDate = LocalDate.now();
 
     @Column(nullable = false)
     private Boolean status = Boolean.FALSE;
 
     public Task() {}
-    public Task(LocalDate dueDate, Boolean status) {
+    public Task(String title, LocalDate dueDate, Boolean status) {
+        this.title = title;
         this.dueDate = dueDate;
         this.status = status;
     }
@@ -29,6 +33,14 @@ public abstract class Task {
 
     public void setId(UUID id) {
         this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public LocalDate getDueDate() {
