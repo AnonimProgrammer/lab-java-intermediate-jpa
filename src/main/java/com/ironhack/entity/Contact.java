@@ -11,7 +11,7 @@ public class Contact {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
-    @Column(nullable = false)
+    @Embedded
     private Name name;
 
     @Column(nullable = false)
